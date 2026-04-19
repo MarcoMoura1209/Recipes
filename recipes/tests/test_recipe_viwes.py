@@ -37,7 +37,6 @@ class test_Recipe_Viwes(TestRecipeBase):
         )
         self.assertIs(view.func, views.recipe)
 
-
     def test_recipe_category_view_returns_404_if_no_recipes_found(self):
         response = self.client.get(
             reverse('recipes:category', kwargs={'category_id': 1000})
